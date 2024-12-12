@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Generate Box Shadow</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-200 text-slate-950">
+    <!-- Toggle Button -->
+
+    <h1 class="mainHeading text-7xl text-center mt-[6vh] md:mb-6 font-medium">
+      Generate Box Shadow
+    </h1>
+    <button
+      id="darkModeToggleId"
+      class="darkModeToggle xl:absolute lg:absolute md:static"
+    >
+      <i class="fas fa-sun" id="darkModeIcon"></i>
+    </button>
+    <div class="flex-container flex justify-center mb-[15vh] mt-[7vh]">
+      <div class="container rounded-lg max-w-[600px]">
+        <div class="result pb-14 pt-5 flex justify-center">
+          <div id="element" class="h-32 w-32 bg-slate-950"></div>
+        </div>
+
+        <div class="sliders">
+          <div class="slider-wrapper flex flex-col justify-between">
+            <label for="h-shadow">Horizontal Shadow:</label>
+            <input
+              type="range"
+              class="custom-range-css"
+              id="h-shadow"
+              max="100"
+              min="-100"
+              value="0"
+            />
+          </div>
+
+          <div class="slider-wrapper">
+            <label for="v-shadow">Vertical Shadow:</label>
+            <input
+              type="range"
+              class="custom-range-css"
+              id="v-shadow"
+              max="100"
+              min="-100"
+              value="0"
+            />
+          </div>
+
+          <div class="slider-wrapper">
+            <label for="blur-radius">Blur Radius:</label>
+            <input
+              type="range"
+              class="custom-range-css"
+              id="blur-radius"
+              max="100"
+              min="0"
+              value="0"
+            />
+          </div>
+
+          <div class="slider-wrapper">
+            <label for="spread-radius">Spread Radius:</label>
+            <input
+              type="range"
+              class="custom-range-css"
+              id="spread-radius"
+              max="50"
+              min="-50"
+              value="0"
+            />
+          </div>
+
+          <div class="slider-wrapper mb-3">
+            <label for="shadow-color">Shadow Color:</label>
+            <input type="color" class="custom-colorbox-css" id="shadow-color" />
+          </div>
+          <div class="slider-wrapper">
+            <label for="shadow-color-opacity">Shadow Color Opacity:</label>
+            <input
+              type="range"
+              class="custom-range-css"
+              id="shadow-color-opacity"
+              max="1"
+              min="0"
+              value="1"
+              step="0.1"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="shadow-inset">Inset Shadow:</label>
+            <input
+              type="checkbox"
+              class="accent-fuchsia-300"
+              id="shadow-inset"
+            />
+          </div>
+
+          <div class="code-wrapper">
+            <textarea
+              id="code"
+              rows="2"
+              class="custom-textarea border-none outline-none"
+            ></textarea>
+            <button onclick="copyCode()">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="footer text-center p-3 bg-slate-300 text-dark shadow-2xl shadow-slate-950"
+    >
+      Designed and developed by
+      <a href="https://github.com/diptiprasadsarangi01" class="hover:underline"
+        >Deep</a
+      >
+      <br />
+      &copy;2024|Code.
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
